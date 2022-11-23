@@ -49,6 +49,12 @@ header {
 
 
 }
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
 
 header img {
   max-width: 40px;
@@ -77,7 +83,6 @@ header img {
 
 #contenedorMain {
   max-width: 100%;
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,6 +114,7 @@ header img {
   color: var(--text-white);
 }
 .cajaSectdos {
+  width: 100%;
   color: var(--text-white);
   display: flex;
   padding: 50px 20px;
@@ -125,23 +131,25 @@ header img {
 }
 
 .card {
-  padding: 10px 20px;
-
-  width: 30%;
-  overflow: hidden;
+  padding: 10px 10px;
   text-align: center;
   background-color: var(--btn-bg);
   border-radius: 15px;
+  min-width: 300px;
 }
 
 .card img {
   border-radius: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .card h3 {
   margin-top: 15px;
   margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 10px;
+  min-width: 40%;
 }
 
 footer {
@@ -149,8 +157,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
+  
 }
 
 footer h2{
@@ -170,11 +179,39 @@ footer p {
   
 }
 
-@media (max-width: 700px) {
+
+
+@media (max-width: 976px) {
   .cajaSectdos {
     
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .card {
+    min-width: 300px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  
+  .header {
+    height: 200px;
+  }
+
+  .navbar-list {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 5px;
+  
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    height: 140px;
   }
 }
